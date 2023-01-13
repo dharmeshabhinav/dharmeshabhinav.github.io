@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+          <script>
+        var visitData = {
+      "referrer": document.referrer,
+      "time_spent": 15,
+      "user_agent": navigator.userAgent
+    };
+
+    
+    fetch("https://github.com/dharmeshabhinav/assets/datafetch.php", {
+      method: "POST",
+      body: JSON.stringify(visitData),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      console.log("Data sent successfully!");
+    }).catch(error => {
+      console.log("Error sending data: " + error);
+    });
+
+    </script>
+  </head>
+  <body>
+      <style> @import url('https://fonts.googleapis.com/css2?family=Junge&display=swap');
+    body {
+
+      background-image: url(https://cdn.discordapp.com/attachments/765925865690628120/1061337490058903693/wallpapersden.com_star-wars-concept-art-2019_4096x2913-02.jpeg);
+
+      background-position: center center;
+
+      background-repeat: no-repeat;
+
+      background-attachment: fixed;
+
+      background-size: cover;
+
+    }
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+<h1 style="font-family: 'Junge', serif; font-size:5vw; color:white">ERROR 404</h1>
+<h1 style="font-family: 'Junge', serif; font-size:3vw; color:white">Seems like the page you are looking for does not exist.</h1>
+<a href="index.html" style="text-decoration: none;"><h1 style="font-family: 'Junge', serif; font-size: 2vw; color: white;">Go back to homepage</h1></a>
+<p><img src="https://streak-stats.demolab.com/?user=abhinavdharmesh&theme=dark" height="205px"/>
+<p><img src="https://streak-stats.demolab.com/?user=abhinavdharmesh&theme=dark" height="205px"/>
+  </body>
+</html>
